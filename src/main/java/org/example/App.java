@@ -1,13 +1,12 @@
 package org.example;
 
-/**
- * Hello world!
- *
- */
-public class App 
+public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        FizzBuzzGame game = new FizzBuzzGame();
+        for (int i = 1; i <= 100; i++) {
+            System.out.println(game.say(i));
+        }
     }
 }
