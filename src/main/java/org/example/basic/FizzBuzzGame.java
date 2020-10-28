@@ -1,4 +1,4 @@
-package org.example;
+package org.example.basic;
 
 /**
  * Represents a game of FizzBuzz. When objects of this class are asked to say
