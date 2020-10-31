@@ -50,3 +50,23 @@ program said "BuzzFizz" when the number divides 15 (instead of the standard
 "FizzBuzz"). Take a moment and ask yourself, how would you solve that problem?
 To clarify, our FizzBuzz module (the same binary) needs to cater to two
 different user segments at the same time.
+
+When you have an answer, please consider the example implementation in the
+[rearrange negative](https://github.com/jesperolsson-se/FizzBuzz/tree/main/src/main/java/org/example/rearrange/negative) package.
+I'd say that's a pretty typical solution, but I'd also call it a bad solution
+because it's inflexible and doesn't leave much room for growth.
+
+Further, we can see that the previous iteration violated OCP, as we could not
+evolve our software without modifying it. That's unfortunate, but perhaps
+acceptable: there was no indication that new requirements would be added. At the
+same time, this should be expected to be the norm. After all, as Ivar Jacobson
+said: "All systems change during their life cycles. This must be borne in mind
+when developing systems expected to last longer than the first version."
+
+Still, what's done, is done. We can't change the fact that the previous version
+violated OCP. What we can do, is determine how we want to approach the uncertain
+future. Are we willing to put down our chips on the current version being the
+final one? Do we (honestly) believe that a quick-and-dirty solution will yield
+sufficient return on investment to compensate for the technical debt? I don't.
+And for the sake of argument, let's assume you don't, either. So, how would you
+refactor our code base, to leave room of growth in unknown directions?
