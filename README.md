@@ -110,23 +110,23 @@ importantly, no unit tests.
 
 This is the power of the OCP and object composition. We added a new rule (one
 class; a singular statement), and nothing else, and that was all we needed to
-wire together a solution an unknowable need. But that's not all, in doing so,
-we enabled many more new combinations.
+wire together a solution for an unknowable need. But that's not all, in doing so
+, we enabled many more new combinations.
 
 The additional number of combinations happens to be infinite, but for the sake
 of clarity, let's constrain ourselves so that we can use no more than one
 `Concatenation` and no `Priority`. Before adding Tazz, we had the following
 basic building blocks: `Echo`, `Fizz`, `Buzz`. Under our constraints, our wiring
-can contain zero, one, or two blocks, and we may reuse a block. This equates to
+can contain zero, one, or two blocks, and we may reuse blocks. This equates to
 the following thirteen arrangements (when choosing one or zero blocks, order
 doesn't matter).
 
 First | Second
 --- | ---
-- | -
-Echo | -
-Fizz | -
-Buzz | -
+&nbsp; | &nbsp;
+Echo | &nbsp;
+Fizz | &nbsp;
+Buzz | &nbsp;
 Echo | Echo
 Echo | Fizz
 Echo | Buzz
@@ -142,11 +142,11 @@ new arrangements. The full 21 arrangements are listed in the following table.
 
 First | Second
 --- | ---
-- | -
-Echo | -
-Fizz | -
-Buzz | -
-Tazz | -
+&nbsp; | &nbsp;
+Echo | &nbsp;
+Fizz | &nbsp;
+Buzz | &nbsp;
+Tazz | &nbsp;
 Echo | Echo
 Echo | Fizz
 Echo | Buzz
@@ -163,3 +163,18 @@ Tazz | Echo
 Tazz | Fizz
 Tazz | Buzz
 Tazz | Tazz
+
+By now, the [network effect](https://en.wikipedia.org/wiki/Network_effect) of
+our design should be evident. As we implement a linear number of composable
+objects, we enable a superlinear number of arrangements. Granted, not all of the
+arrangements correspond to a user need. In fact, very few of them do. However,
+in my opinion, that's not a problem; it's an opportunity. An opportunity for
+innovation and upselling.
+
+According to Boden (2009), combinatorial creativity—producing unfamiliar
+combinations of familiar ideas—is one of the three forms of creativity. This can
+be translated to our object graph: the nodes and example wirings (known
+requirements) are the familiar ideas, while new wirings are unfamiliar
+combinations. Hence, we can hypothesise that this kind of design lends itself
+to more innovation points and, consequently, a higher expected value from
+upselling.
