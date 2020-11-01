@@ -98,3 +98,68 @@ more than examples of the system behaviour, we can work to avoid tunnel vision
 and target fixation. We can choose a design that meets them in an almost
 accidental manner, thus putting us in a prime position for responding to change.
 Again, we'll explore this further in the next section.
+
+## Further evolution
+
+Suppose that, again, a new need arises. A user segement requires that our
+software can play FizzBuzzTazz (say "Tazz", when 7 divides the number). With
+our OCP design, this is simple (as demonstrated in the
+[evolution tazz](https://github.com/jesperolsson-se/FizzBuzz/tree/main/src/main/java/org/example/evolution/tazz) package). Please note how no existing code was 
+modified. No method signatures; no method bodies. No classes and, perhaps most
+importantly, no unit tests.
+
+This is the power of the OCP and object composition. We added a new rule (one
+class; a singular statement), and nothing else, and that was all we needed to
+wire together a solution an unknowable need. But that's not all, in doing so,
+we enabled many more new combinations.
+
+The additional number of combinations happens to be infinite, but for the sake
+of clarity, let's constrain ourselves so that we can use no more than one
+`Concatenation` and no `Priority`. Before adding Tazz, we had the following
+basic building blocks: `Echo`, `Fizz`, `Buzz`. Under our constraints, our wiring
+can contain zero, one, or two blocks, and we may reuse a block. This equates to
+the following thirteen arrangements (when choosing one or zero blocks, order
+doesn't matter).
+
+First | Second
+--- | ---
+- | -
+Echo | -
+Fizz | -
+Buzz | -
+Echo | Echo
+Echo | Fizz
+Echo | Buzz
+Fizz | Echo
+Fizz | Fizz
+Fizz | Buzz
+Buzz | Echo
+Buzz | Fizz
+Buzz | Buzz
+
+When we add Tazz (again, just one additional building block), we can make eight
+new arrangements. The full 21 arrangements are listed in the following table.
+
+First | Second
+--- | ---
+- | -
+Echo | -
+Fizz | -
+Buzz | -
+Tazz | -
+Echo | Echo
+Echo | Fizz
+Echo | Buzz
+Echo | Tazz
+Fizz | Echo
+Fizz | Fizz
+Fizz | Buzz
+Fizz | Tazz
+Buzz | Echo
+Buzz | Fizz
+Buzz | Buzz
+Buzz | Tazz
+Tazz | Echo
+Tazz | Fizz
+Tazz | Buzz
+Tazz | Tazz
