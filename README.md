@@ -46,8 +46,8 @@ design decisions.
 
 Still, preferences are an interesting consideration. Suppose a portion of our
 users really like the idea behind FizzBuzz, but think it would be cute if the
-program said "BuzzFizz" when the number divides 15 (instead of the standard
-"FizzBuzz"). Take a moment and ask yourself, how would you solve that problem?
+program said "BuzzFizz" when 15 divides the number (instead of the standard
+"FizzBuzz"). Take a moment and ask yourself how you would solve that problem.
 To clarify, our FizzBuzz module (the same binary) needs to cater to two
 different user segments at the same time.
 
@@ -69,4 +69,32 @@ future. Are we willing to put down our chips on the current version being the
 final one? Do we (honestly) believe that a quick-and-dirty solution will yield
 sufficient return on investment to compensate for the technical debt? I don't.
 And for the sake of argument, let's assume you don't, either. So, how would you
-refactor our code base, to leave room of growth in unknown directions?
+refactor our code base, to leave room for growth in unknown directions?
+
+The typical solution will leverage subclassing in one way or another. After all,
+isn't that what OCP is all about? Well, no, not really. Implementation
+inheritence is one way to satisfy the principle, to be sure, but hardly the only
+way. As a matter of fact, it's a solution that often turns out to be too rigid
+to meet future needs. Hold on to that thought, and I'll demonstrate in the next
+section.
+
+An alternative implementation is available in the [rearrange positive](https://github.com/jesperolsson-se/FizzBuzz/tree/main/src/main/java/org/example/rearrange/positive) package.
+As you'll notice, we've satisifed our users' needs through object composition.
+The rules for "Fizz" and "Buzz" are completely decoupled from each other, but
+can be wired together to create "FizzBuzz" or "BuzzFizz" when we build our
+object graph.
+
+Already, we can get a sense for why this approach is more flexible: just by
+proposing a new wiring, we could satisfy needs such as "FizzFizzBuzz" (everytime
+3 divides the number, say "Fizz" twice) or "Buzz>Fizz" (even when both rules are
+satisfied, just say "Buzz").
+
+True, those needs don't exist (yet), but that doesn't invalidate the point. The
+design *could* satisfy them, simply by the virtue of flexibility. No extra
+effort is spent on allowing such usage.
+
+Another way to think about it is, by viewing existing requirements as nothing
+more than examples of the system behaviour, we can work to avoid tunnel vision
+and target fixation. We can choose a design that meets them in an almost
+accidental manner, thus putting us in a prime position for responding to change.
+Again, we'll explore this further in the next section.
