@@ -10,7 +10,7 @@ import java.util.Collection;
 import static org.junit.Assert.assertEquals;
 
 /**
- * System test for validating that a FizzBuzz game can be played.
+ * System test for validating that a BuzzFizz game can be played.
  */
 @RunWith(value = Parameterized.class)
 public class BuzzFizzTest {
