@@ -1,5 +1,6 @@
-package org.example.rearrange.positive;
+package org.example.evolution.tazz;
 
+import org.example.rearrange.positive.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -10,15 +11,15 @@ import java.util.Collection;
 import static org.junit.Assert.assertEquals;
 
 /**
- * System test for validating that a BuzzFizz game can be played.
+ * System test for validating that a FizzBuzzTazz game can be played.
  */
 @RunWith(value = Parameterized.class)
-public class BuzzFizzTest {
+public class FizzBuzzTazzTest {
 
     private int number;
     private String expected;
 
-    public BuzzFizzTest(int number, String expected) {
+    public FizzBuzzTazzTest(int number, String expected) {
         this.number = number;
         this.expected = expected;
     }
@@ -30,36 +31,31 @@ public class BuzzFizzTest {
     public static Collection<Object[]> sixteenFirstAnswers() {
         return Arrays.asList(new Object[][]{
                 {1, "1"},
-                {2, "2"},
                 {3, "Fizz"},
-                {4, "4"},
                 {5, "Buzz"},
-                {6, "Fizz"},
-                {7, "7"},
-                {8, "8"},
-                {9, "Fizz"},
-                {10, "Buzz"},
-                {11, "11"},
-                {12, "Fizz"},
-                {13, "13"},
-                {14, "14"},
-                {15, "BuzzFizz"},
-                {16, "16"},
+                {7, "Tazz"},
+                {15, "FizzBuzz"},
+                {21, "FizzTazz"},
+                {35, "BuzzTazz"},
+                {105, "FizzBuzzTazz"},
         });
     }
 
     /**
      * Given some integer,
      * When the game is asked to say the name of the number,
-     * Then the answer should be in accordance with the rules for BuzzFizz.
+     * Then the answer should be in accordance with the rules for FizzBuzzTazz.
      */
     @Test
     public void shouldPlayCorrectly()
     {
         Rule sut = new Priority(
                 new Concatenation(
-                        new Buzz(),
-                        new Fizz()
+                        new Concatenation(
+                                new Fizz(),
+                                new Buzz()
+                        ),
+                        new Tazz()
                 ),
                 new Echo()
         );
