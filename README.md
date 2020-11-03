@@ -1,6 +1,27 @@
 # FizzBuzz
-Toy project for demonstrating one aspect of the Open-Closed Principle, using the
-popular programming excercise [FizzBuzz](https://en.wikipedia.org/wiki/Fizz_buzz).
+The Open-Closed Principle (OCP) is one of the SOLID design principles.
+Consequently, it's part of what many software architects considers the
+fundamentals of their craft. In spite of this, few discussions of OCP go beyond
+classes and inheritance. Surprisingly often, the principle is stripped down to
+implementation inheritance (and criticised by the composion-over-inheritance
+movement).
+
+In this repo, I'll challenge those ideas. To me, OCP is a much broader design
+principle that encourages us to leave our software room to grow. To evolve. 
+
+My stance is that OCP is not constrained to a select few programming language
+features. The principle is more about writing modules that, to paraphrase the
+Brundtland Report, *meets the needs of the present without compromising the
+ability of future increments to meet their own needs*.
+
+In this repo, we'll start off with the popular programming excercise
+[FizzBuzz](https://en.wikipedia.org/wiki/Fizz_buzz). From there, I'll ask you to
+think about the software design and propose my own solutions. Through this lens,
+I aim to present a broader perspective of the principle.
+
+I'll demonstrate that OCP implies that no tests should ever need to be altered. 
+That OCP accelerates the product-market fit and endorses innovation. That OCP
+enhances agility.
 
 ## The basic problem
 Simply put, FizzBuzz is a game about division. Taking turns, the players count
@@ -73,7 +94,7 @@ refactor our code base, to leave room for growth in unknown directions?
 
 The typical solution will leverage subclassing in one way or another. After all,
 isn't that what OCP is all about? Well, no, not really. Implementation
-inheritence is one way to satisfy the principle, to be sure, but hardly the only
+inheritance is one way to satisfy the principle, to be sure, but hardly the only
 way. As a matter of fact, it's a solution that often turns out to be too rigid
 to meet future needs. Hold on to that thought, and I'll demonstrate in the next
 section.
