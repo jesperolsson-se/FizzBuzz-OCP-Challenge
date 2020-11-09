@@ -199,3 +199,23 @@ requirements) are the familiar ideas, while new wirings are unfamiliar
 combinations. Hence, we can hypothesise that this kind of design lends itself
 to more innovation points and, consequently, a higher expected value from
 upselling.
+
+## And beyond
+So far, all we've done is to add a couple of similar-looking rules. Okay, so
+maybe `Concatenation` and `Priority` were a bit different from the others, but
+they still aren't very spectacular. What if we want to drastically change the
+behaviour of our objects, instead of just adding or reorder them?
+
+Well, in that case, we add something that can process their *behaviour* and
+provide were the originals fell short. Do you want all pairs of z's to be
+capitalized? [Add a decorator](https://github.com/jesperolsson-se/FizzBuzz/tree/main/src/main/java/org/example/evolution/zztop).
+Do you want your objects to
+[speak like a robber](https://en.wikipedia.org/wiki/R%C3%B6varspr%C3%A5ket)?
+[Add a decorator](https://github.com/jesperolsson-se/FizzBuzz/tree/main/src/main/java/org/example/evolution/robberlanguage).
+The point is, when we want some different behaviour, we don't modify existing 
+code; we add new code. If we can't, that is a strong indication of a design
+flaw. That is not to say that designing software this way is easy, but rather
+that if your objects *are* small, capsualted entities with well-defined
+behaviour that model the problem domain, then it will be quite
+straight-forward to extend the software. Even without the need for
+implementation inheritance.
