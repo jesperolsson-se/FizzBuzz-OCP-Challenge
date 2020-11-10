@@ -1,3 +1,5 @@
+[![Mutation tested with PIT](https://img.shields.io/badge/PIT_mutation-100%25-success)](http://pitest.org/)
+[![Coverage tested with PIT](https://img.shields.io/badge/PIT_coverage-100%25-success)](http://pitest.org/)
 # FizzBuzz
 The Open-Closed Principle (OCP) is one of the SOLID design principles.
 Consequently, it's part of what many software architects considers the
