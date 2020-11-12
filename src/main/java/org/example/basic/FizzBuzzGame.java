@@ -13,7 +13,7 @@ public class FizzBuzzGame {
      *         FizzBuzz, if 3 and 5 both (i.e., 15) divides the number.
      *         Otherwise, the response is the number itself.
      */
-    public String say(int i) {
+    public String say(final int i) {
         String result = "";
 
         if (i % 3 == 0) {

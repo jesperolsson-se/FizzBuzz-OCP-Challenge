@@ -1,10 +1,15 @@
 package org.example.rearrange.positive;
 
-public class App
-{
-    public static void main( String[] args )
-    {
-        // Caters to the user segment that wants a normal FizzBuzz game ("FizzBuzz").
+public final class App {
+
+    private App() { }
+
+    /**
+     * An example program that plays a game of FizzBuzz and a game of BuzzFizz.
+     * @param args Not applicable.
+     */
+    public static void main(final String[] args) {
+        // Caters to the user segment that wants a normal FizzBuzz game.
         Rule fizzBuzz = new Priority(
                 new Concatenation(
                         new Fizz(),
@@ -13,11 +18,12 @@ public class App
                 new Echo()
         );
 
-        for (int i = 1; i <= 100; i++) {
+        final int rounds = 100;
+        for (int i = 1; i <= rounds; i++) {
             System.out.println(fizzBuzz.say(i));
         }
 
-        // Caters to the user segment that wants a rearranged FizzBuzz game ("BuzzFizz").
+        // Caters to the user segment that wants a rearranged FizzBuzz game.
         Rule buzzFizz = new Priority(
                 new Concatenation(
                         new Buzz(),
@@ -26,7 +32,7 @@ public class App
                 new Echo()
         );
 
-        for (int i = 1; i <= 100; i++) {
+        for (int i = 1; i <= rounds; i++) {
             System.out.println(buzzFizz.say(i));
         }
     }

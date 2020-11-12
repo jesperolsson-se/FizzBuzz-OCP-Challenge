@@ -6,12 +6,17 @@ package org.example.rearrange.positive;
 public class Buzz implements Rule {
 
     /**
+     * The number that should divide the input, in order to trigger the rule.
+     */
+    private final int divisor = 5;
+
+    /**
      * {@inheritDoc}
      * @return Buzz, if 5 divides the number.
      *         The empty string, otherwise.
      */
     @Override
-    public String say(int i) {
-        return i % 5 == 0 ? "Buzz" : "";
+    public String say(final int i) {
+        return i % divisor == 0 ? "Buzz" : "";
     }
 }

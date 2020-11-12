@@ -10,5 +10,5 @@ public interface Rule {
      * @param i The number to name.
      * @return A textual representation of how what to call the number.
      */
-    public String say(int i);
+    String say(int i);
 }

@@ -6,12 +6,17 @@ package org.example.rearrange.positive;
 public class Fizz implements Rule {
 
     /**
+     * The number that should divide the input, in order to trigger the rule.
+     */
+    private final int divisor = 3;
+
+    /**
      * {@inheritDoc}
      * @return Fizz, if 3 divides the number.
      *         The empty string, otherwise.
      */
     @Override
-    public String say(int i) {
-        return i % 3 == 0 ? "Fizz" : "";
+    public String say(final int i) {
+        return i % divisor == 0 ? "Fizz" : "";
     }
 }

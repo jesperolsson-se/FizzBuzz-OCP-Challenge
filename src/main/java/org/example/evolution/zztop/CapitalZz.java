@@ -7,9 +7,16 @@ import org.example.rearrange.positive.Rule;
  */
 public class CapitalZz implements Rule {
 
+    /**
+     * The rule to decorate.
+     */
     private final Rule origin;
 
-    public CapitalZz(Rule origin) {
+    /**
+     * Constructor.
+     * @param origin The rule to decorate.
+     */
+    public CapitalZz(final Rule origin) {
         this.origin = origin;
     }
 
@@ -18,7 +25,7 @@ public class CapitalZz implements Rule {
      * @return The origin's answer, but pairs of lowercase z's are capitalized.
      */
     @Override
-    public String say(int i) {
+    public String say(final int i) {
         return origin.say(i).replace("zz", "ZZ");
     }
 }

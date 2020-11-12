@@ -5,6 +5,9 @@ package org.example.rearrange.positive;
  */
 public class Echo implements Rule {
 
+    /**
+     * Constructs a rule that translates a number into a string.
+     */
     public Echo() { }
 
     /**
@@ -12,7 +15,7 @@ public class Echo implements Rule {
      * @return The number as a text string.
      */
     @Override
-    public String say(int i) {
+    public String say(final int i) {
         return Integer.toString(i);
     }
 }
