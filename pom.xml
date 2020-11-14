@@ -40,6 +40,11 @@
       <artifactId>pitest-maven</artifactId>
       <version>1.5.2</version>
     </dependency>
+    <dependency>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-pmd-plugin</artifactId>
+      <version>3.13.0</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -131,6 +136,24 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-pmd-plugin</artifactId>
+        <version>3.13.0</version>
+        <configuration>
+          <linkXRef>false</linkXRef>
+          <printFailingErrors>true</printFailingErrors>
+          <verbose>true</verbose>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>validate</phase>
+            <goals>
+              <goal>check</goal>
+            </goals>
+          </execution>
+        </executions>
+    </plugin>
     </plugins>
   </build>
 </project>
