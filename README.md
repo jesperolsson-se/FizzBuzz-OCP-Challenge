@@ -1,4 +1,6 @@
 [![Coding style enforced by Checkstyle](https://img.shields.io/badge/Checkstyle%20violaitons-0-success)](https://checkstyle.sourceforge.io/)
+[![Analyzed with PMD](https://img.shields.io/badge/PMD%20severity-5-success)](https://pmd.github.io/)
+[![Analyzed with CPD](https://img.shields.io/badge/CPD%20severity-5-success)](https://pmd.github.io/)
 [![Mutation tested with PIT](https://img.shields.io/badge/PIT_mutation-100%25-success)](http://pitest.org/)
 [![Coverage tested with PIT](https://img.shields.io/badge/PIT_coverage-100%25-success)](http://pitest.org/)
 # FizzBuzz
