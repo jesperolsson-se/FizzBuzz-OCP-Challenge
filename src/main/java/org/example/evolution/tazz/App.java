@@ -1,12 +1,23 @@
 package org.example.evolution.tazz;
 
-import org.example.rearrange.positive.*;
+import org.example.rearrange.positive.Buzz;
+import org.example.rearrange.positive.Concatenation;
+import org.example.rearrange.positive.Echo;
+import org.example.rearrange.positive.Fizz;
+import org.example.rearrange.positive.Priority;
+import org.example.rearrange.positive.Rule;
 
-public class App {
+public final class App {
 
-    public static void main( String[] args ) {
+    private App() { }
 
-        // Caters to the user segment that wants a FizzBuzzTazz game ("FizzBuzzTazz").
+    /**
+     * An example program that plays a game of FizzBuzzTazz.
+     * @param args Not applicable.
+     */
+    public static void main(final String[] args) {
+
+        // Caters to the user segment that wants a FizzBuzzTazz game.
         Rule fizzBuzzTazz = new Priority(
                 new Concatenation(
                         new Concatenation(
@@ -18,7 +29,8 @@ public class App {
                 new Echo()
         );
 
-        for (int i = 1; i <= 200; i++) {
+        final int rounds = 200;
+        for (int i = 1; i <= rounds; i++) {
             System.out.println(fizzBuzzTazz.say(i));
         }
     }

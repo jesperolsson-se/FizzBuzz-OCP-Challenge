@@ -1,11 +1,19 @@
 package org.example.basic;
 
-public class App
-{
-    public static void main( String[] args )
-    {
+public final class App {
+
+    private App() { }
+
+    /**
+     * An example program that plays a game of FizzBuzz.
+     * @param args Not applicable.
+     */
+    public static void main(final String[] args) {
         FizzBuzzGame game = new FizzBuzzGame();
-        for (int i = 1; i <= 100; i++) {
+
+        final int rounds = 100;
+
+        for (int i = 1; i <= rounds; i++) {
             System.out.println(game.say(i));
         }
     }
