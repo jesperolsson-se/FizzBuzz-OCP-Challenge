@@ -45,6 +45,11 @@
       <artifactId>maven-pmd-plugin</artifactId>
       <version>3.13.0</version>
     </dependency>
+    <dependency>
+      <groupId>com.github.spotbugs</groupId>
+      <artifactId>spotbugs-maven-plugin</artifactId>
+      <version>4.1.4</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -151,6 +156,23 @@
             <goals>
               <goal>check</goal>
               <goal>cpd-check</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>com.github.spotbugs</groupId>
+        <artifactId>spotbugs-maven-plugin</artifactId>
+        <version>4.1.4</version>
+        <configuration>
+          <effort>max</effort>
+          <includeFilterFile>spotbugs-excludes.xml</includeFilterFile>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>validate</phase>
+            <goals>
+              <goal>check</goal>
             </goals>
           </execution>
         </executions>
