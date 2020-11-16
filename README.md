@@ -1,3 +1,4 @@
+![CI Build](https://img.shields.io/github/workflow/status/jesperolsson-se/FizzBuzz-OCP-Challenge/Java%20CI%20with%20Maven)
 [![Coding style enforced by Checkstyle](https://img.shields.io/badge/Checkstyle%20violaitons-0-success)](https://checkstyle.sourceforge.io/)
 [![Analyzed with SpotBugs](https://img.shields.io/badge/SpotBugs-max-success)](https://spotbugs.github.io/)
 [![Analyzed with PMD](https://img.shields.io/badge/PMD%20severity-5-success)](https://pmd.github.io/)
@@ -218,6 +219,7 @@ capitalized? [Add a decorator](https://github.com/jesperolsson-se/FizzBuzz/tree/
 Do you want your objects to
 [speak like a robber](https://en.wikipedia.org/wiki/R%C3%B6varspr%C3%A5ket)?
 [Add a decorator](https://github.com/jesperolsson-se/FizzBuzz/tree/main/src/main/java/org/example/evolution/robberlanguage).
+
 The point is, when we want some different behaviour, we don't modify existing 
 code; we add new code. If we can't, that is a strong indication of a design
 flaw. That is not to say that designing software this way is easy, but rather
