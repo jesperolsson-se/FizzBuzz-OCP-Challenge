@@ -3,6 +3,8 @@
 [![Analyzed with SpotBugs](https://img.shields.io/badge/SpotBugs-max-success)](https://spotbugs.github.io/)
 [![Analyzed with PMD](https://img.shields.io/badge/PMD%20severity-5-success)](https://pmd.github.io/)
 [![Analyzed with CPD](https://img.shields.io/badge/CPD%20severity-5-success)](https://pmd.github.io/)
+[![Cyclomatic complexity measured by JavaNCSS](https://img.shields.io/badge/JavaNCSS-CCN-success)](https://github.com/codehaus/javancss)
+[![Statements count measured by JavaNCSS](https://img.shields.io/badge/JavaNCSS-NCSS-success)](https://github.com/codehaus/javancss)
 [![Mutation tested with PIT](https://img.shields.io/badge/PIT_mutation-100%25-success)](http://pitest.org/)
 [![Coverage tested with PIT](https://img.shields.io/badge/PIT_coverage-100%25-success)](http://pitest.org/)
 # FizzBuzz
