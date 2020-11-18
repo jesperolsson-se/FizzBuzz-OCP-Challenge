@@ -1,0 +1,12 @@
+graph G {
+  label="fizzBuzz"
+  subgraph "cluster 1"{
+    label="Priority"
+    subgraph "cluster 2" {
+      label="Concatenation"
+      Fizz
+      Buzz
+    }
+    Echo
+  }
+}

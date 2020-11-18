@@ -1,5 +1,5 @@
 ![CI Build](https://img.shields.io/github/workflow/status/jesperolsson-se/FizzBuzz-OCP-Challenge/Java%20CI%20with%20Maven)
-[![Coding style enforced by Checkstyle](https://img.shields.io/badge/Checkstyle%20violaitons-0-success)](https://checkstyle.sourceforge.io/)
+[![Coding style enforced by Checkstyle](https://img.shields.io/badge/Checkstyle%20violations-0-success)](https://checkstyle.sourceforge.io/)
 [![Analyzed with SpotBugs](https://img.shields.io/badge/SpotBugs-max-success)](https://spotbugs.github.io/)
 [![Analyzed with PMD](https://img.shields.io/badge/PMD%20severity-5-success)](https://pmd.github.io/)
 [![Analyzed with CPD](https://img.shields.io/badge/CPD%20severity-5-success)](https://pmd.github.io/)
@@ -112,7 +112,9 @@ An alternative implementation is available in the [rearrange positive](https://g
 As you'll notice, we've satisifed our users' needs through object composition.
 The rules for "Fizz" and "Buzz" are completely decoupled from each other, but
 can be wired together to create "FizzBuzz" or "BuzzFizz" when we build our
-object graph.
+object graph (see Fig 1).
+
+![](./src/main/java/org/example/rearrange/positive/fizzBuzz.svg "Fig 1. Object graph of FizzBuzz")
 
 Already, we can get a sense for why this approach is more flexible: just by
 proposing a new wiring, we could satisfy needs such as "FizzFizzBuzz" (everytime
