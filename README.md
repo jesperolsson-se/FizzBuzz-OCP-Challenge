@@ -123,6 +123,8 @@ satisfied, just say "Buzz").
 
 ![](./src/main/java/org/example/rearrange/positive/fizzFizzBuzz.svg "Fig 2. Object graph of FizzFizzBuzz")
 
+![](./src/main/java/org/example/rearrange/positive/buzz>Fizz.svg "Fig 3. Object graph of buzz>Fizz")
+
 True, those needs don't exist (yet), but that doesn't invalidate the point. The
 design *could* satisfy them, simply by the virtue of flexibility. No extra
 effort is spent on allowing such usage.
