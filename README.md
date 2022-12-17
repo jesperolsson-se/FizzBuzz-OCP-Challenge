@@ -1,4 +1,4 @@
-![CI Build](https://img.shields.io/github/workflow/status/jesperolsson-se/FizzBuzz-OCP-Challenge/Java%20CI%20with%20Maven)
+![CI Build](https://img.shields.io/github/actions/workflow/status/jesperolsson-se/FizzBuzz-OCP-Challenge/maven.yml?branch=main)
 [![Coding style enforced by Checkstyle](https://img.shields.io/badge/Checkstyle%20violations-0-success)](https://checkstyle.sourceforge.io/)
 [![Analyzed with SpotBugs](https://img.shields.io/badge/SpotBugs-max-success)](https://spotbugs.github.io/)
 [![Analyzed with PMD](https://img.shields.io/badge/PMD%20severity-5-success)](https://pmd.github.io/)
